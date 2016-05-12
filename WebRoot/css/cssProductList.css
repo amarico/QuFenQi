@@ -1,0 +1,205 @@
+body
+{
+    color: #555;
+    font-size:12px;
+    font-family:'Microsoft YaHei';
+    letter-spacing:2px;
+    line-height:150%;
+    padding:0px;
+    margin:0px;
+    
+    
+}
+#divNavigation1
+{
+    height: 13px;
+    /*vertical-align: middle;*/
+    padding: 10px;
+    padding-left:0px;
+    border: 1px solid #ddd;
+}
+
+#divBrand
+{
+    padding:10px;
+    padding-bottom:0px;
+    border: 1px solid #ddd;
+    clear:both;
+}
+
+      
+
+.textInput
+{
+    width:40px;
+}
+.divFrom
+{
+    float:left;
+    color: #555;
+    margin-left:40px;
+}
+
+
+
+a:visited, a:link
+{
+    color:#555;
+    text-decoration:none;
+}
+
+a:hover
+{
+    color:#f54343;
+    text-decoration:underline;
+}
+
+
+ul
+{
+    margin: 0px;
+    padding:0px;
+}
+
+
+
+    
+
+.tdLeft
+{
+    
+    padding:0px;
+    text-align:start;
+    vertical-align:top;
+    width:60px;
+}
+.pinpai_left
+{
+    width: 100%;
+    height:100%;   
+    text-align:left;    
+    vertical-align: top;   
+}
+
+.pinpai_right
+{
+    display:block;
+    height:100%;    
+}
+
+
+.buttonFrom
+{    
+    border: 1px solid #ddd;
+    margin:0px 15px;
+    background-color:#fff;
+    padding:3px 5px;
+}
+
+.button
+{    
+    border: 1px solid #ddd;
+    background-color:#fff;
+    padding:3px 5px;
+}
+
+
+
+.divProduct
+{
+    min-height:0px;
+    min-width:0px;
+    width: 238px;
+    height: 368px;
+}
+
+
+
+#divMain
+{
+    min-height:0px;
+    width: 1076px;
+    height: auto;
+    display: block;
+    position:relative;
+    left:100px;   
+    z-index:1; 
+       position:absolute;
+       top:245px
+}
+
+
+#divSort
+{
+    padding:10px;
+    padding-left:0px;
+    border: 1px solid #ddd;
+    margin:10px 0px;
+    min-height:26px;
+    
+}
+
+
+#divPrice
+{
+    float:right;
+    display:block;
+    width:auto;
+}
+#demo5
+{
+    clear:both;
+}
+#content
+{
+    min-height:0px;
+    
+    
+}
+#tdSpan
+{
+    
+    width: 0px;
+    min-width:0px;
+}
+.divDemo5In
+{    
+    padding-left:0px;
+    border: 1px solid #ddd;
+    margin:10px 0px;
+    min-height:26px;
+}
+.aButton
+{
+    margin-right:10px;
+    margin-left:10px;
+    display:block;
+    float:left;
+}
+table
+{
+    width:100%;
+    padding:0px;
+}
+
+#divNavAdd
+{
+    float:left;
+
+}
+img
+{
+    border-width:0px;
+}
+.divDown
+{
+
+    height: auto;
+    display: block;
+}
+.divUpHead
+{
+    width:100%;
+    top:400px;
+}
+

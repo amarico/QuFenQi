@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+	<constant name="struts.enable.DynamicMethodInvocation" value="false" />
+	<constant name="struts.devMode" value="true" />
+	<constant name="struts.action.extension" value="action"></constant>
+
+	<package name="default" namespace="/" extends="struts-default">
+
+		<!-- 登录注册 -->
+		<action name="login" class="customerAction" method="loginCheck">
+			<result name="success" type="redirect">load.action</result>
+			<result name="input">/error.jsp</result>
+		</action>
+		
+		<!-- 管理员登录-->
+		<action name="adminLogin" class="customerAction" method="adminLoginCheck">
+			<result name="success">/admin/admin.jsp</result>
+			<result name="input">/admin/adminLogin.jsp</result>
+		</action>
+
+		<action name="register" class="customerAction" method="addUser">
+			<result name="success">/login.jsp</result>
+			<result name="input">/register.jsp</result>
+		</action>
+
+		<!-- 搜索功能 -->
+		<action name="search" class="productAction" method="search">
+			<result name="success">/productList.jsp</result>
+		</action>
+		
+		<!-- 分期链接 -->
+		<action name="fenqiLink" class="productAction" method="buildOrder">
+			<result name="success">/order.jsp</result>
+			<result name="input">/login.jsp</result>
+		</action>
+
+		<action name="load" class="productAction">
+			<result name="success">/main.jsp</result>
+		</action>
+
+		<action name="loadDetail" class="productAction" method="showDetail">
+			<result name="success">/productList.jsp</result>
+		</action>
+
+		<!-- 选择具体的商品 -->
+		<action name="product" class="productAction" method="product">
+			<result name="success">/product.jsp</result>
+		</action>
+
+		<!-- 立即分期 -->
+		<action name="fenqi" class="productAction" method="fenQi">
+			<result name="success">/order.jsp</result>
+			<result name="input">/login.jsp</result>
+		</action>
+
+		<!--加入购物车 -->
+		<action name="shopCartJoin" class="productAction" method="shop">
+			<result name="success" type="redirect">shopCart.action</result>
+			<result name="input">/login.jsp</result>		
+		</action>
+
+		<!-- 跳转修改密码 -->
+		<action name="changepassword" class="customerAction" method="changePassword">
+			<result name="success">/modifypassword.jsp</result>
+			<result name="input" type="redirect">/getmyself.action</result>
+		</action>
+
+		<!-- 修改密码 -->
+		<action name="modifypassword" class="customerAction" method="modifyPassword">
+			<result name="success" type="redirect">/getmyself.action</result>
+			<result name="input" type="redirect">/changePassword.action</result>
+		</action>
+		
+		<!-- 管理员修改密码 -->
+		<action name="adminModifyPassword" class="customerAction" method="adminModifyPassword">
+			<result name="success">/admin/adminLogin.jsp</result>
+			<result name="input">/admin/adminModifyPassword.jsp</result>
+		</action>
+
+		<!-- 跳转修改邮箱 -->
+		<action name="changeemail" class="customerAction" method="changeEmail">
+			<result name="success">/modifyemail.jsp</result>
+			<result name="input" type="redirect">/getmyself.action</result>
+		</action>
+
+		<!-- 修改邮箱 -->
+		<action name="modifyemail" class="customerAction" method="modifyEmail">
+			<result name="success" type="redirect">/getmyself.action</result>
+			<result name="input" type="redirect">/changeemail.action</result>
+		</action>
+
+		<!-- 跳转修改地址 -->
+		<action name="changeaddress" class="customerAction" method="changeAddress">
+			<result name="success">/modifyaddress.jsp</result>
+			<result name="input" type="redirect">/getmyself.action</result>
+		</action>
+
+		<!-- 修改地址 -->
+		<action name="modifyaddress" class="customerAction" method="modifyAddress">
+			<result name="success" type="redirect">/getmyself.action</result>
+			<result name="input" type="redirect">/changeaddress.action</result>
+		</action>
+
+		<!-- 提交订单 -->
+		<action name="submitorder" class="payAction" method="submitOrder">
+			<result name="success">/pay.jsp</result>
+			<result name="input">/error.jsp</result>
+		</action>
+		
+		<!-- 删除订单 -->
+		<action name="cancelorder" class="payAction" method="cancelOrder">
+			<result name="success" type="redirect">getorder.action</result>
+		</action>
+
+		<!-- 付款 -->
+		<action name="pay" class="payAction" method="pay">
+			<result name="success" type="redirect">getorder.action</result>
+			<result name="input">/error.jsp</result>
+		</action>
+
+		<!-- 退出 -->
+		<action name="loginout" class="customerAction" method="loginOut">
+			<result name="success">/index.jsp</result>
+		</action>
+		
+		<!-- 继续付款的获取订单 -->
+		<action name="continueorder" class="payAction" method="orderContinue">
+			<result name="success">/pay.jsp</result>
+		</action>
+		
+		<!-- 管理员退出 -->
+		<action name="adminloginout" class="customerAction" method="adminloginOut">
+			<result name="success">/admin/adminLogin.jsp</result>
+		</action>
+
+		<!-- 我的趣分期 -->
+		<action name="getmyself" class="customerAction" method="getMyself">
+			<result name="success">/personMain.jsp</result>
+			<result name="input">/login.jsp</result>
+		</action>
+
+		<!-- 查看订单 -->
+		<action name="getorder" class="customerAction" method="getOrder">
+			<result name="success">/personOrder.jsp</result>
+			<result name="input">/login.jsp</result>
+		</action>
+
+		<!-- 查看订单 -->
+		<action name="getmoney" class="customerAction" method="getMoney">
+			<result name="success">/personMoney.jsp</result>
+			<result name="input">/login.jsp</result>
+		</action>
+		
+		<action name="checkSafe" class="customerAction" method="checkSafe">
+			<result name="success">/personSafe.jsp</result>
+		</action>
+		
+		<!-- 查看购物车 -->
+		<action name="shopCart" class="customerAction" method="getShop">
+			<result name="success">/personShop.jsp</result>
+			<result name="input">/login.jsp</result>
+		</action>
+
+		<!-- 管理员增加用户 -->
+		<action name="addCustomer" class="customerAction" method="addCustomer">
+			<result name="success">/admin/admin.jsp</result>
+		</action>
+		<!-- 管理员查询用户 -->
+		<action name="queryCustomer" class="customerAction" method="queryCustomer">
+			<result name="success">/admin/admin.jsp</result>
+		</action>
+		<!-- 删除用户 -->
+		<action name="deleteCustomer" class="customerAction" method="deleteCustomer">
+			<result name="success">/admin/admin.jsp</result>
+		</action>
+		<!-- 修改用户 -->
+		<action name="getCustomer1" class="customerAction" method="getCustomer1">
+			<result name="success">/admin/modifyCustomer.jsp</result>
+		</action>
+		<action name="modifyCustomer" class="customerAction" method="modifyCustomer">
+			<result name="success">/admin/admin.jsp</result>
+		</action>
+
+		<action name="allProduct" class="productAction" method="allProduct">
+			<result name="success">/admin/queryProduct.jsp</result>
+		</action>
+		<!-- 上传图片 -->
+		<action name="uploadAction" class="uploadAction" method="upload">
+			<result name="success">/admin/queryProduct.jsp</result>
+		</action>
+		<!-- 增加商品 -->
+		<action name="addProduct" class="productAction" method="addProduct">
+			<result name="success">/admin/addPic.jsp</result>
+		</action>
+		<!-- 删除商品 -->
+		<action name="deleteProduct" class="productAction" method="deleteProduct">
+			<result name="success">/admin/queryProduct.jsp</result>
+		</action>
+		<!-- 修改商品 -->
+		<action name="getProductInformation" class="productAction"
+			method="getProductInformation">
+			<result name="success">/admin/modifyProduct.jsp</result>
+		</action>
+		<action name="modifyProduct" class="productAction" method="modifyProduct">
+			<result name="success">/admin/queryProduct.jsp</result>
+		</action>
+
+		<!-- 查询报表 -->
+		<action name="reportTable" class="productAction" method="reportTable">
+			<result name="success">/admin/province.jsp</result>
+			<result name="input">/admin/city.jsp</result>
+		</action>
+
+		<!-- 消费报表 -->
+		<action name="reportCost" class="productAction" method="reportCost">
+			<result name="success">/admin/costReport.jsp</result>
+		</action>
+	</package>
+</struts>

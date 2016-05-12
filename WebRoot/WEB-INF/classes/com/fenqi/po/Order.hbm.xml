@@ -1,0 +1,23 @@
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    
+    <hibernate-mapping package="com.fenqi.po">
+    	<class name="Order" table="orderlist">
+    		<id name="id" column="id">
+    			<generator class="native"/>
+    		</id>
+    		<property name="userName" column="username"></property>
+    		<property name="submitDate" column="submitdate"></property>
+    		<property name="orderId" column="orderid"></property>
+    		<property name="shop" column="shop"></property>
+			<property name="price" column="price"></property>
+			<property name="count" column="count"></property>
+    		<property name="firstPay" column="firstpay"></property>
+    		<property name="monthTime" column="monthtime"></property>
+    		<property name="monthPay" column="monthpay"></property>
+			<property name="allMoney" column="allmoney"></property>
+			<property name="isPay" column="ispay"></property>
+			<property name="content" column="content"></property>
+    	</class>
+    </hibernate-mapping>

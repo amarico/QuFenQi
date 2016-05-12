@@ -1,0 +1,15 @@
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    
+    <hibernate-mapping package="com.fenqi.po">
+    	<class name="Judge" table="judge">
+    		<id name="id" column="id">
+    			<generator class="native"/>
+    		</id>
+    		<property name="pid" column="pid"></property>
+    		<property name="userName" column="username"></property>
+    		<property name="evaluate" column="evaluate"></property>
+    		<property name="date" column="date"></property>
+    	</class>
+    </hibernate-mapping>

@@ -1,0 +1,20 @@
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    
+    <hibernate-mapping package="com.fenqi.po">
+    	<class name="ShopCart" table="shopcart">
+    		<id name="id" column="id">
+    			<generator class="native"/>
+    		</id>
+    		<property name="userName" column="username"></property>
+    		<property name="productName" column="productname"></property>
+    		<property name="price" column="price"></property>
+    		<property name="firstPay" column="firstpay"></property>
+			<property name="monthTime" column="monthtime"></property>
+			<property name="monthPay" column="monthpay"></property>
+    		<property name="color" column="color"></property>
+    		<property name="type" column="type"></property>
+    		<property name="states" column="states"></property>
+    	</class>
+    </hibernate-mapping>

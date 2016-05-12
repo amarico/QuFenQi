@@ -1,0 +1,26 @@
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    
+    <hibernate-mapping package="com.fenqi.po">
+    	<class name="Characters" table="characters">
+    		<id name="detailId" column="detailid">
+    			<generator class="native"/>
+    		</id>
+    		<property name="id" column="id"></property>
+    		<property name="color" column="color"></property>
+    		<property name="type" column="type"></property>
+    		<property name="pictureOne" column="pictureone"></property>
+    		<property name="pictureTwo" column="picturetwo"></property>
+    		<property name="pictureThree" column="picturethree"></property>
+    		<property name="pictureFour" column="picturefour"></property>
+    		<property name="pictureIntroOne" column="pictureintroone"></property>
+    		<property name="pictureIntroTwo" column="pictureintrotwo"></property>
+    		<property name="pictureIntroThree" column="pictureintrothree"></property>
+    		<property name="pictureIntroFour" column="pictureintrofour"></property>
+    		<property name="pictureIntroFive" column="pictureintrofive"></property>
+    		<many-to-one name="productInfo" insert="false" update="false" lazy="false" foreign-key="fk_characters_id_productinfo_id">
+    			<column name="id"></column>
+    		</many-to-one>
+    	</class>
+    </hibernate-mapping>

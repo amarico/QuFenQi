@@ -1,0 +1,26 @@
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    
+    <hibernate-mapping package="com.fenqi.po">
+    	<class name="Customer" table="customer">
+    		<id name="id" column="id">
+    			<generator class="native"/>
+    		</id>
+    		<property name="userName" column="username"></property>
+    		<property name="password" column="pwd"></property>
+    		<property name="name" column="name"></property>
+    		<property name="e_mail" column="email"></property>
+    		<property name="province" column="province"></property>
+    		<property name="city" column="city"></property>
+    		<property name="address" column="address"></property>
+    		<property name="creditLine" column="creditline"></property>
+    		<property name="money" column="money"></property>
+    		<property name="lastTime" column="lasttime"></property>
+    		
+    		<set name="order" lazy="false">
+    			<key column="username" foreign-key="fk_order_username_customer_username"/>
+    			<one-to-many class="Order"/>
+    		</set>
+    	</class>
+    </hibernate-mapping>

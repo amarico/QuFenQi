@@ -1,0 +1,22 @@
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    
+    <hibernate-mapping package="com.fenqi.po">
+    	<class name="TypeDetail" table="typedetail">
+    		<id name="pdid" column="pdid">
+    			<generator class="native"/>
+    		</id>
+    		<property name="pid" column="pid"></property>
+    		<property name="TypeDetailName" column="typedetailname"></property>
+    		<set name="product" lazy="false" inverse="true">
+    			<key column="pdid" foreign-key="fk_productinfo_pdid_typedetail_pdid"/>
+    			<one-to-many class="ProductInfo"/>
+    		</set>
+    		
+    		<!-- 多对一，商品分类到商品总类 -->
+    		<many-to-one name="typeAll" insert="false" update="false" lazy="false" foreign-key="fk_typedetail_pid_typeall_pid">
+    			<column name="pid"></column>
+    		</many-to-one>   		
+    	</class>
+    </hibernate-mapping>

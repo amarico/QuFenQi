@@ -1,0 +1,102 @@
+﻿
+
+ul {
+	list-style:none;
+}
+
+
+#mobanwang_com {
+	height:37px;
+	background-color:rgba(0, 0, 0, 0.22);
+	text-align:left;
+    color:#000;
+    font-size:14px;
+    margin-left:-1px;
+    margin-right:-1px;
+
+}
+
+
+#mobanwang_com li ul {
+	display:none;
+}
+#mobanwang_com li ul li {
+	float:none;
+}
+ #mobanwang_com li ul li {
+	display:inline;
+}
+#mobanwang_com li ul a {
+	float:none;
+	height:32px;
+	line-height:32px;
+	padding:0 10px;
+	text-transform:capitalize;
+}
+#mobanwang_com .height-auto {
+	line-height:15px;
+	padding:5px 10px;
+}
+.second-menu, .third-menu, .fourth-menu {
+	position:absolute;
+}
+.first-menu li {
+	float:left;
+	position:relative;
+}
+.first-menu a {
+	float:left;
+	display:block;
+	padding:0 20px;
+	height:37px;
+	line-height:35px;
+	background:#f00;
+    color:#fff;
+}
+.first-menu a:hover {
+	background:#fb7272;
+}
+.second-menu {
+	top:37px;
+	right:0;
+}
+.second-menu {
+	right:-1px;
+}
+.second-menu a {
+	font-size:11px;
+}
+.second-menu a.mobanwang {
+	background:#000 url(image/mobanwang.gif) no-repeat right top;
+}
+.second-menu a.mobanwang:hover {
+	background:#808080 url(image/mobanwang.gif) no-repeat right -32px;
+}
+.second-menu a.mobanwang-02 {
+	background:#3a3a3a url(image/mobanwang.gif) no-repeat right -64px;
+}
+.second-menu a.mobanwang-02:hover {
+	background:#4698ca url(image/mobanwang.gif) no-repeat right -110px;
+}
+.third-menu, .fourth-menu {
+	width:120px;
+	top:-31px;
+	left:120px;
+}
+.third-menu a {
+	background:#4c4c4c;
+	font-weight:normal;
+}
+#subMgm {
+	/*width:177px;*/
+    width:130px;
+}
+#subMgm .third-menu {
+	/*left:20px;*/
+}
+#subMgm .fourth-menu {
+	left:120px;
+}
+#subMusic, #subNews {
+	width:120px;    
+}

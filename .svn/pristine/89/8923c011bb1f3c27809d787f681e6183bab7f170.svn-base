@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:aop="http://www.springframework.org/schema/aop"
+xmlns:tx="http://www.springframework.org/schema/tx"
+xsi:schemaLocation=
+"http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
+    
+    <bean name="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+    	<property name="configLocation">
+    		<value>classpath:hibernate.cfg.xml</value>
+    	</property>
+    </bean>
+    
+    <!-- 负责session的开启和关闭，负责事物的开启，提交和回滚（遇到runtimeException会自动回滚） -->
+    <bean name="txManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+    	<property name="sessionFactory" ref="sessionFactory"/>
+    	<property name="autodetectDataSource" value="false"/>
+    </bean>
+    
+    <!-- 配置事务的传播特性 -->
+    <tx:advice id="txAdvice" transaction-manager="txManager">
+    	<tx:attributes>
+    		<tx:method name="add*" propagation="REQUIRED"/>
+    		<tx:method name="modify*" propagation="REQUIRED"/>
+    		<tx:method name="del*" propagation="REQUIRED"/>
+    		<tx:method name="*" propagation="REQUIRED"/>
+    	</tx:attributes>
+    </tx:advice>
+    
+    <!-- 配置事务的管理位置 ,应该放在业务逻辑层，才能保证一致性和完整性-->
+    <aop:config>
+    	<aop:pointcut expression="execution(* com.fenqi.managerImpl.*.*(..))" id="allManagerMethod"/>
+    	<aop:advisor advice-ref="txAdvice" pointcut-ref="allManagerMethod"/>
+    </aop:config>
+</beans>
+

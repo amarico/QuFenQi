@@ -1,0 +1,26 @@
+package com.fenqi.po;
+
+public class PerPrice {
+	private int id;
+	private String type;
+	private float percentPrice;
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getType() {
+		return type;
+	}
+	public void setType(String type) {
+		this.type = type;
+	}
+	public float getPercentPrice() {
+		return percentPrice;
+	}
+	public void setPercentPrice(float percentPrice) {
+		this.percentPrice = percentPrice;
+	}
+	
+}

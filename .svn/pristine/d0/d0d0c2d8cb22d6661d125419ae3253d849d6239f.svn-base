@@ -1,0 +1,16 @@
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    
+    <hibernate-mapping package="com.fenqi.po">
+    	<class name="TypeAll" table="typeall">
+    		<id name="pid" column="pid">
+    			<generator class="native"/>
+    		</id>
+    		<property name="TypeAllName" column="typeallname"></property>
+    		<set name="productType" lazy="false" inverse="true">
+    			<key column="pid" foreign-key="fk_typedetail_pid_typeall_pid"/>
+    			<one-to-many class="TypeDetail"/>
+    		</set>
+    	</class>
+    </hibernate-mapping>

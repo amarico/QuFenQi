@@ -1,0 +1,82 @@
+
+.divIndexLink
+{
+    float: right;
+}
+
+
+
+.divHead
+{
+    padding: 7px;
+    padding-left:30px;
+   
+    background-color:rgba(0, 0, 0, 0.24);
+    height:22px;
+}
+.aBtn
+{
+    display:block;
+    float:left;
+}
+.divTable
+{
+    left:100px;
+    display:block;
+}
+.tdHeadSpase
+{
+    width:561px;
+}
+.divContent
+{
+    width:1076px;
+    z-index:2;
+    position:absolute;    
+    left:100px;
+    top:47px
+}
+
+    .divContent table td
+    {
+    }
+
+.tableHead
+{
+    margin:30px 0px;
+}
+
+
+#inpSearch
+{
+    width:400px;
+    height:30px;
+    border:1px solid #f00;
+}
+#btnSearch
+{
+    height: 35px;
+    border:0px;
+    background-color:#f00;
+    color:#fff;
+}
+#divMySearch
+{
+    width:105px;
+    height:34px;
+    background-image:url("../IMG/mySearch.JPG");
+    /*background-repeat:no-repeat;*/
+    padding-left:32px;
+    padding-top:8px;
+
+}
+#aMySearch
+{
+    vertical-align:middle;
+}
+.tdSearchBottom a
+{
+    margin-right:10px;
+}
+
+

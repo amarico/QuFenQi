@@ -1,0 +1,429 @@
+#divWelcome
+{
+    float: left;
+    width: auto;
+}
+
+#divHeadIndex
+{
+    float: left;
+    width: auto;
+    margin-left: 47%;
+    
+}
+
+.zoom-small-image
+{
+    padding: 10px;
+    position: relative;
+}
+
+
+    .zoom-small-image img
+    {
+        width: 270px;
+        height: 270px;
+    }
+
+.zoom-section
+{
+    width: 292px;
+    border: 1px solid #ddd;
+    border-left:0px;
+    border-top:0px;
+    height: 381px;
+    float: left;
+}
+.cloud-zoom-big
+{
+    border:4px solid #fff;
+}
+a img
+{
+    border: 0px;
+}
+
+
+.divImageIndex
+{
+    border-top: 1px solid #ddd;
+    padding: 5px 0px;
+}
+
+    .divImageIndex a
+    {
+        width: 65px;
+        height: 65px;
+        margin: 4px;
+        margin-top:0px;
+        display: block;
+        float: left;
+    }
+
+        .divImageIndex a img
+        {
+            width: 62px;
+            height: 62px;
+            border: 1px solid #ddd;
+            margin: 0px;
+        }
+
+table tr
+{
+    height: 44px;
+}
+
+.tdLeft1
+{
+    width: 94px;
+    padding-right: 5px;
+}
+
+.tdMonthPayment
+{
+    color: #f00;
+    background-color: #faf9f9;
+    border-bottom: 1px solid #ddd;
+}
+
+.tableUp
+{
+}
+
+div.divTableIn
+{
+    margin-left: 60px;
+    padding: 0px;
+    position: relative;
+    float: left;
+    top: 0px;
+    left: 0px;
+    width: 712px;
+}
+
+
+
+#btnSearch
+{
+    border: 0px;
+    background-color: #f00;
+    color: #fff;
+    height: 40px;
+    width: 100px;
+}
+
+.tdPromise
+{
+    text-align: right;
+}
+
+table td input
+{
+    height: 25px;
+    width: 100px;
+    padding-left:7px;
+}
+
+
+
+.divDetaileBottom, .divDetailContent
+{
+    width: 100%;
+}
+.divDetaileBottom
+{
+    position:absolute;
+    top:436px;
+    border:1px solid #ddd;
+    border-top:0px;
+    left:-1px;
+}
+#inpSubBut ,#buttonAddToCart
+{
+    width: 100px;
+    height: 35px;
+    border: 0px;
+    background-color: #f00;
+    color: #fff;
+    margin: 10px 0px 30px 0px;
+    margin-right:25px;
+    
+    margin-top:15px;
+}
+#inpSubBut:hover ,#buttonAddToCart:hover
+{
+    background-color: rgba(255, 0, 0, 0.62);
+}
+
+
+.divDetailContent
+{
+    width: 100%;
+}
+
+.divMain
+{
+    min-height: 0px;
+    width: 1074px;
+    height: auto;
+    display: block;
+    position: relative;
+    left: 100px;
+    z-index: 1;
+    position: absolute;
+    top: 234px;
+    border: 1px solid #ddd;
+    border-top:0px;
+    border-bottom:0px;
+}
+
+.divNavigation1
+{
+    height: 13px;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+h2
+{
+    font-size: 17px;
+    font-weight:normal;
+}
+
+
+.divDetaileBottom img
+{
+    width: 94%;
+    margin: 30px;
+}
+
+
+
+
+
+.tableDetail .tdSpace
+{
+    border-bottom: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+}
+
+.tableDetail tr
+{
+    height:35px;
+}
+.tableDetail .tdSpacebefore
+{
+    border-bottom: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    width: 30px;
+}
+
+.tableDetail .tdDetail
+{
+    background-color: #faf9f9;
+    border-top: 2px solid #f00;
+    border-right: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+    width: 100px;
+    text-align: center;
+}
+
+.tdGray
+{
+    background-color: #faf9f9;
+    border-top: 1px solid #ddd;
+}
+
+
+
+table
+{
+    padding: 0px;
+    margin: 0px;
+    border-collapse: collapse;
+}
+
+
+.divProductDetail
+{
+    background-color: #faf9f9;
+}
+
+
+
+
+.tdGray .tetx
+{
+    border: 1px solid #ddd;
+}
+
+.radioButton
+{
+    display: none;
+}
+
+.labelClass, .labelColor
+{
+    width: 40px;
+    background-color: #fff;
+    text-align: center;
+    padding: 7px;
+    color: #555;
+    text-decoration: none;
+    border: 1px solid #ddd;
+    margin-right:15px;
+}
+
+    .labelColor:hover, .labelClass:hover
+    {
+        border: 1px solid #f00;
+    }
+
+.labelSelect
+{
+    border: 1px solid #f00;
+    background-image: url("../images/buttonLabel.png");
+    background-repeat: no-repeat;
+}
+#imgRegrate
+{
+    float:right;
+}
+
+.divMain
+{
+    margin-top:41px;
+}
+
+#fristMoney
+{
+    float:left;
+}
+
+#divContent
+{
+    width:1076px;
+    z-index:2;
+    position:absolute;    
+    left:138px;
+    top:47px
+}
+.divMain
+{
+    left:138px;
+}
+
+#divHead
+{
+    padding: 7px;
+    padding-left:138px;
+   
+    background-color:rgba(0, 0, 0, 0.24);
+    height:22px;
+}
+
+table.divTable tr td
+{
+    padding: 0px;
+}
+
+.divDetaileBottom img
+{
+    width: 94%;
+    margin: 30px;
+}
+
+divOneDetail
+.divDetaileBottom
+{
+    float: left;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+#divMenu
+{
+    background-color: #fff;
+    height: 40px;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid rgba(255, 98, 98, 0.54);
+    margin-top: 20px;
+    padding-top: 15px;
+}
+
+    #divMenu .divMenuItem
+    {
+        width: 90px;
+        height: 25px;
+        float: left;
+        margin-left: 20px;
+        text-align: center;
+        padding-top: 10px;
+        color: #fff;
+        background-color: rgba(191, 191, 191, 0.67);
+        cursor: pointer;
+    }
+
+        #divMenu .divMenuItem:hover
+        {
+            height: 30px;
+            background-color: rgba(255, 98, 98, 0.54);
+        }
+
+    #divMenu .divMenuItemCurrent
+    {
+        height: 30px;
+        background-color: #f00;
+    }
+
+.tableHead img
+{
+    height: 80px;
+}
+
+.divProductDetail
+{
+    display: none;
+}
+
+.divProductDetailHide
+{
+    display: block;
+}
+
+
+.divDetaileBottom .divOneDetail
+{
+    width: 91%;
+    margin: 30px;
+    border:1px solid #ddd;
+    padding:20px;
+}
+
+.pName
+{
+    font-size:14px;
+    font-weight:bold;
+    width:100px;
+    float:left;
+    margin:0px;    
+    margin-bottom:5px;
+}
+.pDate
+{
+    font-weight:bold;    
+    float:left;
+    width:200px;
+    position:relative;    
+    margin:0px;    
+    margin-bottom:5px;
+}
+.pDetail
+{
+    color:#666;
+    text-indent: 2em;
+}
+
+#imgRegret{
+	float:right;
+}

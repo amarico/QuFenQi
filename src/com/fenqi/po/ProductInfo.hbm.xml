@@ -1,0 +1,31 @@
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    
+    <hibernate-mapping package="com.fenqi.po">
+    	<class name="ProductInfo" table="productinfo">
+    		<id name="id" column="id">
+    			<generator class="native"/>
+    		</id>
+    		<property name="pdid" column="pdid"></property>
+    		<property name="productName" column="name"></property>
+    		<property name="brand" column="brand"></property>
+    		<property name="cu" column="cu"></property>
+    		<property name="originalPrice" column="originalprice"></property>
+    		<property name="barginPrice" column="Barginprice"></property>
+    		<property name="isboutique" column="isboutique"></property>
+    		<property name="ishotsell" column="ishotsell"></property>
+    		<property name="monthNum" column="monthnum"></property>
+    		<property name="monthPrice" column="monthprice"></property>
+    		<property name="sellVolume" column="sellvolume"></property>
+    		<property name="date" column="date"></property>
+    		<property name="pic" column="pic"></property>
+    		<set name="character" lazy="false" inverse="true">
+    			<key column="id" foreign-key="fk_characters_id_productinfo_id"/>
+    			<one-to-many class="Characters"/>
+    		</set>
+    		<many-to-one name="typeDetail" insert="false" update="false" lazy="false" foreign-key="fk_productinfo_pdid_typedetail_pdid">
+    			<column name="pdid"></column>
+    		</many-to-one>
+    	</class>
+    </hibernate-mapping>
